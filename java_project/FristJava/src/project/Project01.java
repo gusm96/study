@@ -12,15 +12,15 @@ public class Project01 {
 	private int birthday;
 	private String group;
 
-	Project01(String name, String phoneNum, String email, String address, int birthday, String group) {
-
-		this.name = name;
-		this.phoneNum = phoneNum;
-		this.email = email;
-		this.address = address;
-		this.birthday = birthday;
-		this.group = group;
-	}
+//	Project01(String name, String phoneNum, String email, String address, int birthday, String group) {
+//
+//		this.name = name;
+//		this.phoneNum = phoneNum;
+//		this.email = email;
+//		this.address = address;
+//		this.birthday = birthday;
+//		this.group = group;
+//	}
 
 	Project01() {
 	}
