@@ -1,5 +1,7 @@
 package chapter06;
 
+import java.util.Scanner;
+
 //문제 1.
 //
 //int형 1차원 배열을 매개변수로 전달 받아서 배열에 저장된 최대값,
@@ -14,10 +16,17 @@ package chapter06;
 //int형 배열에 채워질 정수는 프로그램 사용자로부터 입력 받고, 배열의 길이는 임의로 결정
 public class Array01 {
 	public static void main(String[] args) {
-		int [] arr = {23, 55 , 77 , 123, 13, 24, 77};
+		Scanner scanner = new Scanner(System.in);
+		int [] arr = new int[5];
+		for(int i = 0; i < arr.length; i++) {
+			System.out.println("숫자를 입력하세요.");
+			System.out.print("> ");
+			arr[i]=scanner.nextInt();
+		}
 		
 		System.out.println("최소값: "+minValue(arr));
 		System.out.println("최대값: "+maxValue(arr));
+		scanner.close();
 	}
 	
 	public static int minValue(int[] arr) {
