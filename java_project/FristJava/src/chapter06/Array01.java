@@ -17,37 +17,44 @@ import java.util.Scanner;
 public class Array01 {
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
-		int [] arr = new int[5];
-		for(int i = 0; i < arr.length; i++) {
+		int[] arr = new int[5];
+		for (int i = 0; i < arr.length; i++) {
 			System.out.println("숫자를 입력하세요.");
 			System.out.print("> ");
-			arr[i]=scanner.nextInt();
+			arr[i] = scanner.nextInt();
 		}
-		
-		System.out.println("최소값: "+minValue(arr));
-		System.out.println("최대값: "+maxValue(arr));
+
+		System.out.println("최소값: " + minValue(arr));
+		System.out.println("최대값: " + maxValue(arr));
 		scanner.close();
 	}
-	
+
 	public static int minValue(int[] arr) {
-		// 최소값 반환
 		int min = arr[0];
-		for(int i = 0 ; i < arr.length; i++) {
-			if(arr[i] < min) {
+		
+		// arr[i] 번째의 값과 min의 값을 배열의 길이만큼 비교해서
+		// 가장 작은 값을 최종적으로 min 에 담는다.
+		for (int i = 0; i < arr.length; i++) {
+			if (arr[i] < min) {
 				min = arr[i];
 			}
 		}
+		// 최소값 min을 반환
 		return min;
 	}
+
 	public static int maxValue(int[] arr) {
-		// 최대값 반환
 		int max = arr[0];
-		for(int i = 0 ; i < arr.length; i++) {
-			if(arr[i] > max) {
+
+		// arr[i] 번째의 값과 max의 값을 배열의 길이만큼 비교해서
+		// 가장 큰 값을 최종적으로 max에 담는다.
+		for (int i = 0; i < arr.length; i++) {
+			if (arr[i] > max) {
 				max = arr[i];
 			}
 		}
+		// 최대값 max를 반환
 		return max;
 	}
-	
+
 }
