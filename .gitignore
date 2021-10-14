@@ -94,7 +94,6 @@ local.properties
 hs_err_pid*
 
 # End of https://www.toptal.com/developers/gitignore/api/eclipse,java
-FristJava/.classpath
-FristJava/.project
-java_project/FristJava/.classpath
-java_project/FristJava/.project
+.classpath
+.project
+
