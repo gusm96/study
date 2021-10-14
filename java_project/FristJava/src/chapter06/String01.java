@@ -5,11 +5,13 @@ public class String01 {
 	// String str = “ABCDEFGHIJKLMN”;
 	// 그리고 이 문자열을 역순으로 다시 출력하는 프로그램을 작성.
 	public static void main(String[] args) {
+		
 		String str = "ABCDEFGHIJKLMN";
-		String reverse = "";
-		for(int i = str.length() - 1;i>=0;i--){
-			reverse = reverse + str.charAt(i);
-		}
+		
+		StringBuffer sb = new StringBuffer(str);
+		String reverse = sb.reverse().toString();
+		
 		System.out.println(reverse);
+
 	}
 }
