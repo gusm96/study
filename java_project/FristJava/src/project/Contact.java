@@ -2,7 +2,7 @@ package project;
 
 import java.util.Scanner;
 
-public class Project01 {
+public class Contact {
 	public static Scanner scanner;
 
 	private String name;
@@ -12,7 +12,7 @@ public class Project01 {
 	private int birthday;
 	private String group;
 
-	Project01() {
+	Contact() {
 	}
 
 	public String getName() {
@@ -62,10 +62,9 @@ public class Project01 {
 	public void setGroup(String group) {
 		this.group = group;
 	}
-	
-	
+
 	// 사용자 입력값을 받아 setter를 이용하여 데이터 저장.
-	public void saveInfo(Project01 user) {
+	public void saveInfo(Contact user) {
 
 		System.out.println("이름을 입력해주세요.");
 		System.out.print("> ");
@@ -92,8 +91,9 @@ public class Project01 {
 		System.out.print("> ");
 		user.setGroup(scanner.nextLine());
 	}
+
 	// user에 저장된 연락처 정보를 getter로 가져와 출력
-	public void getInfo(Project01 user) {
+	public void getInfo(Contact user) {
 		System.out.println("\n-------------------------------------------------------\n");
 		System.out.println("이름: " + user.getName());
 		System.out.println("전화번호: " + user.getPhoneNum());
@@ -102,11 +102,12 @@ public class Project01 {
 		System.out.println("생일: " + user.getBirthday());
 		System.out.println("그룹: " + user.getGroup());
 		System.out.println("\n-------------------------------------------------------\n");
-		
+
 	}
+
 	// 저장된 연락처 정보를 수정할 수 있도록 하는 메소드.
-	public void update(Project01 user) {
-		while(true) {
+	public void update(Contact user) {
+		while (true) {
 			System.out.println("정보를 수정하시겠습니까? Y/N");
 			System.out.print("> ");
 			String yesNo = scanner.nextLine();
@@ -119,17 +120,16 @@ public class Project01 {
 				scanner.close();
 				break;
 			}
-			
+
 		}
 	}
 
 	public static void main(String[] args) {
 		scanner = new Scanner(System.in);
-		Project01 user = new Project01();
+		Contact user = new Contact();
 		user.saveInfo(user);
 		user.getInfo(user);
 		user.update(user);
-		
 
 	}
 
