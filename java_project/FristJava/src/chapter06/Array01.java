@@ -17,7 +17,36 @@ import java.util.Scanner;
 public class Array01 {
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
+
+		int[][] arr1 = { { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 }, { 10, 11, 12 } };
+
+		for (int i = 0; i < arr1.length; i++) {
+			for (int j = 0; j < arr1[i].length; j++) {
+				System.out.print(arr1[i][j] + "\t");
+			}
+			System.out.println();
+		}
+
+		// 임시 배열을 생성
+		int[] temp = arr1[arr1.length - 1];
+
+		for (int i = arr1.length - 1; i > 0; i--) {
+			arr1[i] = arr1[i - 1];
+
+		}
+		arr1[0] = temp;
+		System.out.println("시프트");
+		for (int i = 0; i < arr1.length; i++) {
+			for (int j = 0; j < arr1[i].length; j++) {
+				System.out.print(arr1[i][j] + "\t");
+			}
+			System.out.println();
+		}
+
+	
+		
 		int[] arr = new int[5];
+		
 		for (int i = 0; i < arr.length; i++) {
 			System.out.println("숫자를 입력하세요.");
 			System.out.print("> ");
@@ -26,12 +55,28 @@ public class Array01 {
 
 		System.out.println("최소값: " + minValue(arr));
 		System.out.println("최대값: " + maxValue(arr));
+
+		// 2차원 배열의 선언
+		int[][] arr3 = { { 1, 2, 3, }, { 4, 5, 6, 7 }, { 8, 9, 10, 11, 12, 13 } };
+
+		System.out.println("2차원 배열 출력");
+		addOneArr(arr3, 10);
+		System.out.println("=========================================");
+		// for -each
+		for(int i = 0; i<arr.length; i++) {
+			System.out.println(arr[i]);
+		}
+		System.out.println("=========================================");
+		System.out.println("for-each");
+		for(int num : arr) {
+			System.out.println(num);
+		}
 		scanner.close();
 	}
 
 	public static int minValue(int[] arr) {
 		int min = arr[0];
-		
+
 		// arr[i] 번째의 값과 min의 값을 배열의 길이만큼 비교해서
 		// 가장 작은 값을 최종적으로 min 에 담는다.
 		for (int i = 0; i < arr.length; i++) {
@@ -57,4 +102,35 @@ public class Array01 {
 		return max;
 	}
 
+	public static void addOneArr(int[][] arr, int add) {
+
+		// 출력
+		// 행
+		for (int i = 0; i < arr.length; i++) {
+			// 열
+			for (int j = 0; j < arr[i].length; j++) {
+				System.out.print(arr[i][j] + "\t");
+			}
+			System.out.println();
+		}
+
+		// 매개변수로 전달받은 숫자를 각 요소에 더해준다.
+		for (int i = 0; i < arr.length; i++) {
+			// 열
+			for (int j = 0; j < arr[i].length; j++) {
+				arr[i][j] += add;
+			}
+
+		}
+		System.out.println("각 요소에 숫자를 더하기 ============================");
+		// 출력
+		// 행
+		for (int i = 0; i < arr.length; i++) {
+			// 열
+			for (int j = 0; j < arr[i].length; j++) {
+				System.out.print(arr[i][j] + "\t");
+			}
+			System.out.println();
+		}
+	}
 }
