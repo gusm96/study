@@ -13,10 +13,8 @@ package chapter06;
 //	③    배열에 저장된 Student 타입의 인스턴스의 메소드를 이용해서 모든 데이터를 출력해봅시다.
 
 public class Student {
-	final int MAX_SCORE = 100;
-	final int MIN_SCORE = 50;
 
-	// 10명의 핵생의 국어, 영어, 수학 점수를 담을 2차원 배열
+	// 10명의 학생의 국어, 영어, 수학 점수를 담을 2차원 배열
 	// 점수는 math.random 을 이용하자
 
 	public static void score() {
@@ -26,7 +24,7 @@ public class Student {
 			System.out.printf("학생%d 점수\n", i + 1);
 			System.out.println("국어\t영어\t수학\t");
 			for (int j = 0; j < arr[i].length; j++) {
-				int score = (int) (Math.random() * 100);
+				int score = (int) (Math.random() * 71)+30;
 
 				arr[i][j] = score;
 				System.out.print(score + "\t");
