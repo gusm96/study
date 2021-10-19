@@ -31,8 +31,7 @@ public int age() {
 	
 	public void greeting() {
 		
-		System.out.println("안녕하세요. 저는 " + this.name + "입니다. " + this.age() + "살 입니다.");
-
+		System.out.println("안녕하세요. 저는 " + this.name + "이고,\n" + this.age() + "살 입니다.");
 	}
 
 }

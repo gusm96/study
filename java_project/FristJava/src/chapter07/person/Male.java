@@ -12,7 +12,8 @@ public class Male extends Person {
 	public void greeting() {
 
 		super.greeting();
-		System.out.println("제 직업은 " + gender + "입니다.");
+		System.out.println("제 성별은 " + gender + "입니다.");
+		System.out.println();
 	}
 
 }
