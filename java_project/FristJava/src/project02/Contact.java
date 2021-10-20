@@ -4,19 +4,28 @@ import java.util.Scanner;
 
 public class Contact {
 	public static Scanner scanner = new Scanner(System.in);
-	
-	private int numOfContact;
+
 	private String name;
 	private String phoneNum;
 	private String email;
 	private String address;
 	private int birthday;
 	private String group;
-	
-	private String [] contact = new String[10];
-	
+
+	// 기본 생성자
+
 	public Contact() {
-		numOfContact=0;
+	}
+
+	// 매개변수가 있는 생성자
+
+	public Contact(String name, String phoneNum, String email, String address, int birthday, String group) {
+		this.name = name;
+		this.phoneNum = phoneNum;
+		this.email = email;
+		this.address = address;
+		this.birthday = birthday;
+		this.group = group;
 	}
 
 	public String getName() {
@@ -67,72 +76,14 @@ public class Contact {
 		this.group = group;
 	}
 
-	// 사용자 입력값을 받아 setter를 이용하여 데이터 저장.
-	public static void insert() {
-		Contact user = new Contact();
-		scanner.nextLine();
-		System.out.println("이름을 입력해주세요.");
-		System.out.print("> ");
-		user.setName(scanner.nextLine());
-		
+	// 연락처 정보를 출력하는 메소드
 
-		System.out.println("전화번호를 입력해주세요.");
-		System.out.print("> ");
-		user.setPhoneNum(scanner.nextLine());
-
-		System.out.println("이메일을 입력해주세요.");
-		System.out.print("> ");
-		user.setEmail(scanner.nextLine());
-
-		System.out.println("주소를 입력해주세요.");
-		System.out.print("> ");
-		user.setAddress(scanner.nextLine());
-
-		System.out.println("생일을 입력해주세요.");
-		System.out.print("> ");
-		user.setBirthday(scanner.nextInt());
-		scanner.nextLine();
-
-		System.out.println("그룹을 입력해주세요.");
-		System.out.print("> ");
-		user.setGroup(scanner.nextLine());
-		
-		System.out.println(user);
+	public void printInfo() {
+		System.out.println("이름: " + this.getName());
+		System.out.println("전화번호: " + this.getPhoneNum());
+		System.out.println("이메일: " + this.getEmail());
+		System.out.println("주소: " + this.getAddress());
+		System.out.println("생일: " + this.getBirthday());
+		System.out.println("그룹: " + this.getGroup());
 	}
-	
-	public void printAll() {
-		
-	}
-	
-	// user에 저장된 연락처 정보를 getter로 가져와 출력
-	public void getInfo(Contact user) {
-		System.out.println("\n-------------------------------------------------------\n");
-		System.out.println("이름: " + user.getName());
-		System.out.println("전화번호: " + user.getPhoneNum());
-		System.out.println("이메일: " + user.getEmail());
-		System.out.println("주소: " + user.getAddress());
-		System.out.println("생일: " + user.getBirthday());
-		System.out.println("그룹: " + user.getGroup());
-		System.out.println("\n-------------------------------------------------------\n");
-
-	}
-
-	// 저장된 연락처 정보를 수정할 수 있도록 하는 메소드.
-	public void update(Contact user) {
-		while (true) {
-			System.out.println("정보를 수정하시겠습니까? Y/N");
-			System.out.print("> ");
-			String yesNo = scanner.nextLine();
-			if (yesNo.equalsIgnoreCase("y")) {
-				user.insert();
-			} else {
-				scanner.close();
-				break;
-			}
-
-		}
-	}
-
-	
-
 }
