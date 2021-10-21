@@ -38,16 +38,18 @@ public class FootballPlayer implements Comparable<FootballPlayer> {
 	@Override
 	public int hashCode() {
 
-		return age % 10;
+		return this.age % 10;
 	}
 
 	@Override
 	public boolean equals(Object obj) {
 		boolean result = false;
-		FootballPlayer fp = (FootballPlayer) obj;
-		// 팀, 이름 , 나이가 같은것은 중복 출력 X
-		if (this.team.equalsIgnoreCase(fp.team) && this.name.equalsIgnoreCase(fp.name) && this.age == fp.age) {
-			result = true;
+		if(obj !=null && obj instanceof FootballPlayer) {
+			FootballPlayer fp = (FootballPlayer) obj;
+			// 팀, 이름 , 나이가 같은것은 중복 출력 X
+			if (this.team.equalsIgnoreCase(fp.team) && this.name.equalsIgnoreCase(fp.name) && this.age == fp.age) {
+				result = true;
+			}
 		}
 		return result;
 	}
