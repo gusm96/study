@@ -1,11 +1,8 @@
 package project04;
 
 
-//	1.  Contact 클래스는 기본정보를 저장하고 기본 정보를 출력하는 메소드를 정의합니다.
-//		- 생성자를 통해 기본 정보들을 초기화 합니다.
-
 import java.util.Scanner;
-
+// ShowData 인터페이스를 상속하는 Contact 추상클래스.
 public abstract class Contact implements ShowData {
 	public static Scanner scanner = new Scanner(System.in);
 
@@ -80,8 +77,7 @@ public abstract class Contact implements ShowData {
 		this.group = group;
 	}
 
-	// 연락처 정보를 출력하는 메소드
-	// 오버라이딩 한다.
+	// 추상메소드 void printInfo()
 	public void printInfo() {
 		System.out.println("이름: " + this.getName());
 		System.out.println("전화번호: " + this.getPhoneNum());
