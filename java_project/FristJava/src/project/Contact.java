@@ -3,8 +3,9 @@ package project;
 import java.util.Scanner;
 
 public class Contact {
-	public static Scanner scanner;
+	// 변수 선언
 
+	public static Scanner scanner;
 	private String name;
 	private String phoneNum;
 	private String email;
