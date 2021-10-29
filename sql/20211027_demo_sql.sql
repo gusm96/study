@@ -1,7 +1,8 @@
--- аж╪╝ют╢о╢ы.
--- ©╧а╕╦╕ ю╖гя евюл╨М ╩Щ╪╨, ╣╔юлем ╩Пютго╢б SQL
 
--- евюл╨Мю╩ ╩Ха╕
+-- Лё╪Л└²Л·┘К▀┬К▀╓.
+-- Л≤┬Л═°К╔╪ Л°└М∙° М┘▄Л²╢К╦■ Л┐²Л└╠, К█╟Л²╢М└╟ Л┌╫Л·┘М∙≤К┼■ SQL
+
+-- М┘▄Л²╢К╦■Л²└ Л┌╜Л═°
 DROP TABLE  emp;
 DROP TABLE dept;
 DROP TABLE salgrade;
@@ -83,3 +84,13 @@ insert into salgrade values (5, 3001, 9999);
 
 
 commit;
+
+
+--rollback;
+
+Select * from dept;
+
+
+
+
+
