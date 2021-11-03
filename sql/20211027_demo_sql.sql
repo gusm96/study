@@ -22,7 +22,7 @@ create table emp(
   hiredate date,
   sal      number(7,2),
   comm     number(7,2),
-  deptno   number(2,0),
+  deptno   number(2,0), -- null, 10, 20, 30, 40
   constraint pk_emp primary key (empno),
   constraint fk_deptno foreign key (deptno) references dept (deptno)
 );
