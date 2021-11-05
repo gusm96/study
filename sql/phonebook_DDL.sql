@@ -1,4 +1,7 @@
 -- PhoneBook DDL : 테이블 정의서 를 참고 해서 DDL 작성한다.
+drop table phoneInfo_univ;
+drop table phoneInfo_com;
+drop table phoneInfo_basic;
 
 CREATE table phoneInfo_basic (
     idx number(6) constraint pi_basic_idx_PK primary key,
@@ -9,14 +12,23 @@ CREATE table phoneInfo_basic (
     fr_regdate date default sysdate
 );
 
+-- phoneinfo_basic 테이블 PK -> idx 에 입력할 일련번호 
+-- 시퀀스 생성
+create sequence pib_idx_seq
+start with 1
+minvalue 1
+increment by 1
+maxvalue 999999
+;
+
 -- insert : CREATE
 
 desc phoneinfo_basic;
 
 insert into phoneinfo_basic --()
-        values (1, '손흥민', '010-0000-0000', 'son@gmail.com', 'LONDON', sysdate);
+        values (pib_idx_seq.nextval, '손흥민', '010-0000-0000', 'son@gmail.com', 'LONDON', sysdate);
 insert into phoneinfo_basic --()
-        values (2, '이강인', '010-9999-9999', 'lee@gmail.com', 'LONDON', sysdate);
+        values (pib_idx_seq.nextval, '이강인', '010-9999-9999', 'lee@gmail.com', 'LONDON', sysdate);
     
 
 
@@ -46,6 +58,8 @@ where  idx = 1
 -- delete
 delete from phoneinfo_basic where idx=1;
 
+
+
 create table phoneinfo_univ (
     idx number(6),
     fr_u_major VARCHAR2(20) default 'N' not null,
@@ -56,6 +70,11 @@ create table phoneinfo_univ (
     constraint pi_univ_ref_FK FOREIGN KEY (fr_ref) REFERENCES phoneInfo_basic (idx)
 );
 
+-- sequence
+create sequence piu_idx_seq
+maxvalue 999999;
+
+
 
 -- insert
 
@@ -63,10 +82,11 @@ create table phoneinfo_univ (
 
 -- 1. 기본 정보 입력
 insert into phoneinfo_basic --()
-        values (3, '황희찬', '010-3333-1111', 'hh@gmail.com', 'LONDON', sysdate);
+        values (pib_idx_seq.nextval, '황희찬', '010-3333-1111', 'hh@gmail.com', 'LONDON', sysdate);
+select pib_idx_seq.currval from dual;
 -- 2. 학교 정보 입력
 insert into phoneinfo_univ
-        values(1, '축구', 1, 3)
+        values(piu_idx_seq.nextval, '축구', 1, PIB_IDX_SEQ.currval)
 ;
 
 -- select
@@ -120,13 +140,16 @@ create table phoneinfo_com (
     fr_ref number(6) not null constraint pi_com_ref_FK REFERENCES phoneinfo_basic (idx)
 );
 
+-- sequence
+create sequence pic_idx_seq maxvalue 999999;
+
 -- insert
 select idx from phoneinfo_basic;
 insert into phoneinfo_basic
-        values (4, '황의조', '010-2222-1111', 'h@gmail.com', 'SEOUL', sysdate);
+        values (pib_idx_seq.nextval, '황의조', '010-2222-1111', 'h@gmail.com', 'SEOUL', sysdate);
 desc phoneinfo_com;
 insert into phoneinfo_com
-        values (1, 'NAVER', 4);
+        values (pic_idx_seq.nextval, 'NAVER', pib_idx_seq.currval);
         
 -- 회사 친구 입력 : 기본 정복 입력 -> 회사정보 입력
 
@@ -158,7 +181,7 @@ delete from phoneinfo_basic where idx=4;
 -- 전체 데이터 리스트 출력 : 테이블 세개 JOIN
 select pb.fr_name, pb.fr_phonenumber, pu.fr_u_major, pc.fr_c_company
 from phoneinfo_basic pb, phoneinfo_com pc, phoneinfo_univ pu
-where pb.idx=pc.fr_ref(+) and pb.idx=pu.fr_ref(+) and pb.fr_name='손흥민'
+where pb.idx=pc.fr_ref(+) and pb.idx=pu.fr_ref(+) -- and pb.fr_name='손흥민'
 ;
 
 select * from phoneinfo_view where fr_name='손흥민'  ;
