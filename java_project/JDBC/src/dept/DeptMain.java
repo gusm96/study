@@ -23,6 +23,7 @@ public class DeptMain {
 		
 		List<Dept> list = null;
 		
+		
 		try {
 			conn = ConnectionProvider.getConnection();
 			
@@ -54,7 +55,7 @@ public class DeptMain {
 			
 			
 			// 부서 정보를 입력
-			Dept newDept = new Dept(70, "DEV", "SEOUL");
+			Dept newDept = new Dept(90, "DEV", "SEOUL");
 			
 			int insertCnt = deptDao.insertDept(conn, newDept);
 			if(insertCnt>0) {
