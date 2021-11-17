@@ -1,0 +1,16 @@
+body {
+  background-color: rgb(0, 0, 0, 0.3);
+}
+
+div.login_box {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+}
+
+.field {
+  width: 400px;
+  height: 400px;
+  border: 1px solid black;
+  border-radius: 15%;
+}
