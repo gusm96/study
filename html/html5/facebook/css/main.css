@@ -1,0 +1,139 @@
+body {
+  background: #fff;
+  color: #1c1e21;
+  direction: ltr;
+  line-height: 1.34;
+  margin: 0;
+  padding: 0;
+  unicode-bidi: embed;
+  font-family: Helvetica, Arial, sans-serif;
+
+  overflow-y: scroll;
+}
+.main {
+  display: flex;
+  background-color: RGB(240, 242, 245);
+  height: 600px;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 100px;
+}
+.main_info {
+  text-align: start;
+  margin-top: 0;
+  margin-right: 100px;
+  padding-top: 0;
+  padding-right: 32px;
+  font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
+  font-size: 28px;
+  font-weight: normal;
+  width: 500px;
+}
+
+.main_info img {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  left: -40px;
+  bottom: -40px;
+}
+.login {
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  margin: 40px 0 0;
+  padding: 20px 0 28px;
+  width: 396px;
+  height: 380px;
+  text-align: center;
+  padding-bottom: 24px;
+  padding-top: 10px;
+  font-family: inherit;
+}
+.login_form {
+  text-align: center;
+  font-family: inherit;
+  margin: 0;
+  padding: 0;
+}
+.login_form input {
+  text-align: start;
+  display: inline-block;
+  margin: 5px;
+  margin-top: 10px;
+  padding: 15px 0;
+  padding-left: 6px;
+  font-size: 17px;
+  width: 357px;
+  border-color: rgb(0, 0, 0, 0.2);
+  border-radius: 5px;
+  font-family: inherit;
+}
+#submitBtn {
+  box-sizing: content-box;
+  font-weight: bold;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  background-color: #1877f2;
+  border: none;
+  border-radius: 6px;
+  font-size: 20px;
+  line-height: 48px;
+  padding: 5px 16px;
+  width: 332px;
+  cursor: pointer;
+}
+.findPw {
+  font-size: 14px;
+  text-align: center;
+  margin-top: 16px;
+}
+.findPw a {
+  text-decoration: none;
+  color: #1877f2;
+}
+.line {
+  align-items: center;
+  border-bottom: 1px solid #dadde1;
+  display: flex;
+  margin: 20px 16px;
+  text-align: center;
+  font-family: inherit;
+}
+.regBtn {
+  text-align: center;
+  padding-top: 6px;
+  font-family: inherit;
+}
+#registerBtn {
+  box-sizing: content-box;
+  font-weight: bold;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  border: none;
+  border-radius: 6px;
+  font-size: 17px;
+  line-height: 48px;
+  padding: 0 16px;
+  background-color: #36a420;
+  border-color: #36a420;
+}
+
+.newPage {
+  position: relative;
+  bottom: -40px;
+  font-size: 14px;
+}
+.newPage a {
+  font-weight: bold;
+  text-decoration: none;
+  color: #1c1e21;
+}

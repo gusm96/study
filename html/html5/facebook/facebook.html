@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <title>Facebook - 로그인 또는 가입</title>
+  </head>
+  <body>
+    <div>
+      <div class="main">
+        <div class="main_info">
+          <img src="images/logo.svg" width="300px" height="100px" />
+          <p class="main_info_text">
+            Facebook에서 전세계에 있는 친구, 가족, 지인들과 함께 이야기를
+            나눠보세요.
+          </p>
+        </div>
+        <div class="login">
+          <form class="login_form">
+            <input
+              type="text"
+              placeholder="이메일 또는 전화번호"
+              required
+              name="emailOrPhonenum"
+            />
+            <br />
+            <input
+              type="password"
+              placeholder="비밀번호"
+              required
+              name="password"
+            />
+            <br />
+            <input id="submitBtn" type="submit" value="로그인" />
+          </form>
+          <div class="findPw">
+            <a href="">비밀번호를 잊으셨나요?</a>
+          </div>
+          <div class="line"></div>
+          <div class="regBtn">
+            <button id="registerBtn">새 계정 만들기</button>
+          </div>
+          <div class="newPage">
+            <span>유명인, 브랜드 또는 비즈니스를 위한 </span>
+            <a href="">페이지 만들기.</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer_main">
+        <div
+          id="pageFooter"
+          data-referrer="page_footer"
+          data-testid="page_footer"
+        >
+          <ul class="uiList" data-nocookies="1">
+            <li>한국어</li>
+            <li>
+              <a
+                class="_sv4"
+                dir="ltr"
+                href="https://www.facebook.com/"
+                onclick='require("IntlUtils").setCookieLocale("en_US", "ko_KR", "https:\/\/www.facebook.com\/", "www_list_selector", 0); return false;'
+                title="English (US)"
+                >English (US)</a
+              >
+            </li>
+            <li>
+              <a
+                class="_sv4"
+                dir="ltr"
+                href="https://vi-vn.facebook.com/"
+                onclick='require("IntlUtils").setCookieLocale("vi_VN", "ko_KR", "https:\/\/vi-vn.facebook.com\/", "www_list_selector", 1); return false;'
+                title="Vietnamese"
+                >Tiếng Việt</a
+              >
+            </li>
+            <li>
+              <a
+                class="_sv4"
+                dir="ltr"
+                href="https://id-id.facebook.com/"
+                onclick='require("IntlUtils").setCookieLocale("id_ID", "ko_KR", "https:\/\/id-id.facebook.com\/", "www_list_selector", 2); return false;'
+                title="Indonesian"
+                >Bahasa Indonesia</a
+              >
+            </li>
+            <li>
+              <a
+                class="_sv4"
+                dir="ltr"
+                href="https://th-th.facebook.com/"
+                onclick='require("IntlUtils").setCookieLocale("th_TH", "ko_KR", "https:\/\/th-th.facebook.com\/", "www_list_selector", 3); return false;'
+                title="Thai"
+                >ภาษาไทย</a
+              >
+            </li>
+            <li>
+              <a
+                class="_sv4"
+                dir="ltr"
+                href="https://es-la.facebook.com/"
+                onclick='require("IntlUtils").setCookieLocale("es_LA", "ko_KR", "https:\/\/es-la.facebook.com\/", "www_list_selector", 4); return false;'
+                title="Spanish"
+                >Español</a
+              >
+            </li>
+            <li>
+              <a
+                class="_sv4"
+                dir="ltr"
+                href="https://zh-cn.facebook.com/"
+                onclick='require("IntlUtils").setCookieLocale("zh_CN", "ko_KR", "https:\/\/zh-cn.facebook.com\/", "www_list_selector", 5); return false;'
+                title="Simplified Chinese (China)"
+                >中文(简体)</a
+              >
+            </li>
+            <li>
+              <a
+                class="_sv4"
+                dir="ltr"
+                href="https://ja-jp.facebook.com/"
+                onclick='require("IntlUtils").setCookieLocale("ja_JP", "ko_KR", "https:\/\/ja-jp.facebook.com\/", "www_list_selector", 6); return false;'
+                title="Japanese"
+                >日本語</a
+              >
+            </li>
+            <li>
+              <a
+                class="_sv4"
+                dir="ltr"
+                href="https://pt-br.facebook.com/"
+                onclick='require("IntlUtils").setCookieLocale("pt_BR", "ko_KR", "https:\/\/pt-br.facebook.com\/", "www_list_selector", 7); return false;'
+                title="Portuguese (Brazil)"
+                >Português (Brasil)</a
+              >
+            </li>
+            <li>
+              <a
+                class="_sv4"
+                dir="ltr"
+                href="https://fr-fr.facebook.com/"
+                onclick='require("IntlUtils").setCookieLocale("fr_FR", "ko_KR", "https:\/\/fr-fr.facebook.com\/", "www_list_selector", 8); return false;'
+                title="French (France)"
+                >Français (France)</a
+              >
+            </li>
+            <li>
+              <a
+                class="_sv4"
+                dir="ltr"
+                href="https://de-de.facebook.com/"
+                onclick='require("IntlUtils").setCookieLocale("de_DE", "ko_KR", "https:\/\/de-de.facebook.com\/", "www_list_selector", 9); return false;'
+                title="German"
+                >Deutsch</a
+              >
+            </li>
+            <li>
+              <a
+                role="button"
+                class="_42ft _4jy0 _517i _517h _51sy"
+                rel="dialog"
+                ajaxify="/settings/language/language/?uri=https%3A%2F%2Fde-de.facebook.com%2F&amp;source=www_list_selector_more"
+                href="#"
+                title="더 많은 언어 표시하기"
+                ><i class="img sp_1ebZBu_MI1S sx_0b9416"></i
+              ></a>
+            </li>
+          </ul>
+          <div id="contentCurve"></div>
+          <div id="pageFooterChildren">
+            <ul class="uiList pageFooterLinkList _509- _4ki _703 _6-i">
+              <li>
+                <a href="/r.php" title="Facebook에 가입하기">가입하기</a>
+              </li>
+              <li><a href="/login/" title="Facebook에 로그인">로그인</a></li>
+              <li>
+                <a href="https://messenger.com/" title="Messenger를 확인하세요."
+                  >Messenger</a
+                >
+              </li>
+              <li>
+                <a href="/lite/" title="Android용 Facebook Lite."
+                  >Facebook Lite</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.facebook.com/watch/"
+                  title="Watch 동영상을 둘러보세요."
+                  >Watch</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/places/"
+                  title="Facebook에서 다양한 명소를 확인해보세요."
+                  >장소</a
+                >
+              </li>
+              <li>
+                <a href="/games/" title="Facebook 게임을 확인해보세요.">게임</a>
+              </li>
+              <li>
+                <a
+                  href="/marketplace/"
+                  title="Facebook Marketplace를 통해 물품을 거래해보세요."
+                  >Marketplace</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://pay.facebook.com/"
+                  title="Facebook Pay에 대해 더 알아보기"
+                  target="_blank"
+                  >Facebook Pay</a
+                >
+              </li>
+              <li>
+                <a href="/jobs/" title="Facebook에서 지원하고 채용해보세요."
+                  >채용 정보</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.oculus.com/"
+                  title="Oculus에 대해 더 알아보기"
+                  target="_blank"
+                  >Oculus</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://portal.facebook.com/"
+                  title="Facebook Portal에 대해 더 알아보기"
+                  target="_blank"
+                  >Portal</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.instagram.com%2F&amp;h=AT2NMs1fY7_pPo3Z3OwSNww56oesbhhmjwD2RZRsQEd3Fp6oMvXHJa9S1PasCWE-PQaUqW_iPK8eWPfljEq55l8BrCkvf-uLCORuzLiOWy6LYKFT7nG53c8nJXBFHfGR2tDflJ-2oUxdqO1OYEAMRg"
+                  title="Instagram 확인하기"
+                  target="_blank"
+                  rel="noopener nofollow"
+                  data-lynx-mode="asynclazy"
+                  >Instagram</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.bulletin.com/"
+                  title="Bulletin 뉴스레터 확인하기"
+                  >Bulletin</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/local/lists/245019872666104/"
+                  title="지역 리스트 디렉터리를 둘러보세요."
+                  >지역</a
+                >
+              </li>
+              <li>
+                <a href="/fundraisers/" title="가치 있는 일에 기부해보세요."
+                  >기부 캠페인</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/biz/directory/"
+                  title="Facebook 서비스 디렉터리를 둘러보세요."
+                  >서비스</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/votinginformationcenter/?entry_point=c2l0ZQ%3D%3D"
+                  title="투표 정보 센터 보기."
+                  >투표 정보 센터</a
+                >
+              </li>
+              <li>
+                <a href="/groups/explore/" title="그룹 둘러보기.">그룹</a>
+              </li>
+              <li>
+                <a
+                  href="https://about.facebook.com/"
+                  accesskey="8"
+                  title="Facebook 페이지에서 다양한 글과 정보를 읽어보세요. 취업 정보도 확인할 수 있습니다."
+                  >정보</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/ad_campaign/landing.php?placement=pflo&amp;campaign_id=402047449186&amp;nav_source=unknown&amp;extra_1=auto"
+                  title="Facebook 광고로 마케팅 성과를 높여보세요."
+                  >광고 만들기</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/pages/create/?ref_type=site_footer"
+                  title="페이지 만들기"
+                  >페이지 만들기</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://developers.facebook.com/?ref=pf"
+                  title="Facebook 플랫폼 기반 개발자를 위한 공간입니다."
+                  >개발자</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/careers/?ref=pf"
+                  title="함께할 유능한 인재를 찾습니다."
+                  >채용 정보</a
+                >
+              </li>
+              <li>
+                <a
+                  data-nocookies="1"
+                  href="/privacy/explanation"
+                  title="Facebook의 개인정보처리방침에 대해 알려드립니다."
+                  >개인정보처리방침</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/policies/cookies/"
+                  title="쿠키와 Facebook에 대해 알아보세요."
+                  data-nocookies="1"
+                  >쿠키</a
+                >
+              </li>
+              <li>
+                <a
+                  class="_41ug"
+                  data-nocookies="1"
+                  href="https://www.facebook.com/help/568137493302217"
+                  title="AdChoices에 대해 알아보세요."
+                  >AdChoices<i class="img sp_1ebZBu_MI1S sx_7c4afa"></i
+                ></a>
+              </li>
+              <li>
+                <a
+                  data-nocookies="1"
+                  href="/policies?ref=pf"
+                  accesskey="9"
+                  title="약관과 정책을 살펴보세요."
+                  >이용 약관</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/help/?ref=pf"
+                  accesskey="0"
+                  title="고객 센터를 방문하세요."
+                  >고객 센터</a
+                >
+              </li>
+              <li>
+                <a
+                  accesskey="6"
+                  class="accessible_elem"
+                  href="/settings"
+                  title="Facebook 설정 보기 및 수정"
+                  >설정</a
+                >
+              </li>
+              <li>
+                <a
+                  accesskey="7"
+                  class="accessible_elem"
+                  href="/allactivity?privacy_source=activity_log_top_menu"
+                  title="활동 로그 보기"
+                  >활동 로그</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="copyright">
+            <div><span> Meta © 2021</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
