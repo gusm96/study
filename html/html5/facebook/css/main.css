@@ -7,7 +7,6 @@ body {
   padding: 0;
   unicode-bidi: embed;
   font-family: Helvetica, Arial, sans-serif;
-
   overflow-y: scroll;
 }
 .main {
@@ -16,8 +15,10 @@ body {
   height: 600px;
   align-items: center;
   justify-content: center;
+  
   padding-bottom: 100px;
 }
+.main                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
 .main_info {
   text-align: start;
   margin-top: 0;
@@ -69,10 +70,11 @@ body {
   padding-left: 6px;
   font-size: 17px;
   width: 357px;
-  border-color: rgb(0, 0, 0, 0.2);
+  border-color: rgb(0, 0, 0, 0.1);
   border-radius: 5px;
   font-family: inherit;
 }
+
 #submitBtn {
   box-sizing: content-box;
   font-weight: bold;
