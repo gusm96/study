@@ -6,7 +6,7 @@
 
 	CookieBox cookieBox = new CookieBox(request);
 %>
-<!DOCTYPE html>
+<!DOCTYPE htmls>
 <html>
 <head>
 <meta charset="UTF-8">
