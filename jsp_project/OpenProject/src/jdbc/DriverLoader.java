@@ -18,7 +18,7 @@ public class DriverLoader extends HttpServlet {
 		
 		// DB Driver load
 		try {
-			 Class.forName(driver);
+			Class.forName(driver);
 			System.out.println("mysql 드라이브 로드 성공");
 		} catch (ClassNotFoundException e) {
 			System.out.println("mysql 드라이브 로드 실패");

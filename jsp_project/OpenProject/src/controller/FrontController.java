@@ -15,8 +15,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import dept.service.BadRequestCommandImpl;
-import dept.service.Command;
+import member.command.BadRequestCommandImpl;
+import member.command.Command;
 
 public class FrontController extends HttpServlet  {
 	
@@ -27,7 +27,7 @@ public class FrontController extends HttpServlet  {
 			
 		System.out.println("서블릿이 생성될때 한번 실행합니다 -> 초기화 처리 합니다!!!");
 		
-		// 설정 파일에 init-param 설정된 경로 가져오기 
+		// 설정 파일에 init-param 설정된 경로 가져오기
 		String configFile = config.getInitParameter("configPath");
 		// 시스템 경로 실제 경로
 		String configPath = config.getServletContext().getRealPath(configFile);
