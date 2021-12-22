@@ -11,7 +11,21 @@
 	<%@ include file="/WEB-INF/views/frame/header.jsp" %>
 	<%@ include file="/WEB-INF/views/frame/nav.jsp" %>
 	<div id="content">
-		부서 리스트가 보여집니다.
+		${deptList}
+		<table border=1>
+			<tr>
+				<th>부서번호</th>
+				<th>부서이름</th>
+				<th>부서위치</th>
+				<th>관리</th>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td>수정 | 삭제</td>
+			</tr>
+		</table>
 	</div>
 </body>
 </html>
