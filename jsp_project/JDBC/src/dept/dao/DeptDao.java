@@ -1,6 +1,7 @@
 package dept.dao;
 
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -61,5 +62,32 @@ public class DeptDao {
 		
 		return list;
 		
+	}
+
+
+	public int insertDept(Connection conn, Dept dept) {
+		
+		int resultCnt = 0;
+		
+		PreparedStatement pstmt = null;
+		String sql = "INSERT INTO dept(deptno,dname,loc)VALUES(?,?,?);";
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setInt(1, dept.getDeptno());
+			pstmt.setString(2, dept.getDname());
+			pstmt.setString(3, dept.getLoc());
+			
+			resultCnt=pstmt.executeUpdate();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}finally {
+			JdbcUtil.close(pstmt);
+			JdbcUtil.close(conn);
+			
+		}
+		
+		return resultCnt;
 	}
 }
