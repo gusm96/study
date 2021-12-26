@@ -140,4 +140,24 @@ public class DeptDao {
 		
 		return resultCnt;
 	}
+
+	public int deleteDept(Connection conn, String deptno) {
+		int resultCnt = 0;
+		PreparedStatement pstmt = null;
+		
+		String sql = "delete from dept where deptno=?";
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setInt(1, Integer.parseInt(deptno));
+			
+			resultCnt = pstmt.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}finally {
+			JdbcUtil.close(pstmt);
+		}
+		
+		return resultCnt;
+	}
 }

@@ -28,6 +28,18 @@
 		width:700px;
 	}
 </style>
+<script>
+function deleteDept(deptno){
+	if(confirm("삭제하시겠습니까?")){
+		// 삭제 처리할 수 있는 url 이동
+		// http://localhost:8080/jdbc/dept/delet.do?deptno=
+		// alert(deptno + "삭제");
+		location.href="delete.do?deptno="+deptno;
+	}
+}
+
+
+</script>
 </head>
 <body>
 	<%@ include file="/WEB-INF/views/frame/header.jsp" %>
@@ -49,11 +61,7 @@
 				<td>${dept.dname }</td>
 				<td>${dept.loc }</td>
 				<td>
-					<a href="edit.do?deptno=${dept.deptno}">
-						수정
-					</a> 
-							| 
-							삭제
+					<a href="edit.do?deptno=${dept.deptno}">수정</a>	| <a href="javascript:deleteDept(${dept.deptno})">삭제</a>
 				</td>
 			</tr>
 			</c:forEach>
