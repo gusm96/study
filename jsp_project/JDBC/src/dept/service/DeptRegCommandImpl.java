@@ -28,11 +28,11 @@ public class DeptRegCommandImpl implements Command {
 			// 전송 방식 확인
 			System.out.println(req.getMethod());
 			// post 방식의 한글 처리
-			try {
-				req.setCharacterEncoding("utf-8");
-			} catch (UnsupportedEncodingException e) {
-				e.printStackTrace();
-			}
+//			try {
+//				req.setCharacterEncoding("utf-8");
+//			} catch (UnsupportedEncodingException e) {
+//				e.printStackTrace();
+//			}
 
 			// 사용자가 입력한 데이터를 받고
 			String deptno = req.getParameter("deptno");

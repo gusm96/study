@@ -1,0 +1,42 @@
+package filter;
+
+import java.io.IOException;
+
+import javax.servlet.Filter;
+import javax.servlet.FilterChain;
+import javax.servlet.FilterConfig;
+import javax.servlet.ServletException;
+import javax.servlet.ServletRequest;
+import javax.servlet.ServletResponse;
+
+public class EncodingFilter implements Filter {
+	
+	private String encoding;
+	
+	@Override
+	public void destroy() {
+
+	}
+
+	@Override
+	public void doFilter(ServletRequest req, ServletResponse res, FilterChain chain)
+			throws IOException, ServletException {
+
+		// req 에 대한 필터 처리
+		
+		req.setCharacterEncoding(encoding);
+		
+		chain.doFilter(req, res);
+	}
+
+	@Override
+	public void init(FilterConfig filterConfig) throws ServletException {
+		
+		this.encoding = filterConfig.getInitParameter("encoding");
+		
+		if(encoding == null) {
+			this.encoding = "utf-8";
+		}
+	}
+
+}
