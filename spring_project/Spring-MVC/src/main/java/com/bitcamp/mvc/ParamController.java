@@ -41,7 +41,8 @@ public class ParamController {
 		model.addAttribute("pw", pw);
 		return "form/loginInfo";
 	}
-
+	
+	// Command 객체 이용해서 사용자 요청 파라미터 받기
 	@RequestMapping(value = "/getParam3", method = RequestMethod.POST)
 	public String getParam3(@ModelAttribute("loginParam") LoginRequest request) {
 		System.out.println(request);
