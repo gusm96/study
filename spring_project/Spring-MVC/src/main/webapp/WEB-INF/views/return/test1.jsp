@@ -7,9 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-
-	<h1> 쿠키 생성 : ${cookie.saveId.value} </h1>
-	<a href="view"> 쿠키 정보 보기</a>
-	<!-- /mvc/cookie/view -->
+	<h1>Model 객체 반환 : ${msg1}</h1>
 </body>
 </html>

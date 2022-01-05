@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,9 +7,10 @@
 <title>Insert title here</title>
 </head>
 <body>
-
-	<h1> 쿠키 생성 : ${cookie.saveId.value} </h1>
-	<a href="view"> 쿠키 정보 보기</a>
-	<!-- /mvc/cookie/view -->
+	<h1>Header 값 확인</h1>
+	<hr>
+	referer : ${url}
+	<br>referer : ${url1 }
+	<br>referer : ${url2 }
 </body>
 </html>

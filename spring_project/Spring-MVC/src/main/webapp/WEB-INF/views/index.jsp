@@ -20,6 +20,7 @@ li {
 		<li><a href="${pageContext.request.contextPath}/member/reg">Reg</a></li>
 		<li><a href="${pageContext.request.contextPath}/order/order">Order</a></li>
 		<li><a href="${pageContext.request.contextPath}/cookie/make">Cookie</a></li>
+		<li><a href="${pageContext.request.contextPath}/header/check">Check</a></li>
 	</ul>
 </body>
 </html>
