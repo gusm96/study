@@ -21,6 +21,14 @@ li {
 		<li><a href="${pageContext.request.contextPath}/order/order">Order</a></li>
 		<li><a href="${pageContext.request.contextPath}/cookie/make">Cookie</a></li>
 		<li><a href="${pageContext.request.contextPath}/header/check">Check</a></li>
+		<li><a href="${pageContext.request.contextPath}/report/form">Report</a></li>
+		<li><a href="${pageContext.request.contextPath}/names/0">Name0</a></li>
+		<li><a href="${pageContext.request.contextPath}/names/1">Name1</a></li>
+		<li><a href="${pageContext.request.contextPath}/names/2">Name2</a></li>
+		<li><a href="${pageContext.request.contextPath}/mypage/mypage1">Mypage1</a></li>
+		<li><a href="${pageContext.request.contextPath}/mypage/mypage2">Mypage2</a></li>
+		<li><a href="${pageContext.request.contextPath}/mypage/mypage3">Mypage3</a></li>
+		<li><a href="${pageContext.request.contextPath}/mypage/help/intro">Help</a></li>
 	</ul>
 </body>
 </html>
