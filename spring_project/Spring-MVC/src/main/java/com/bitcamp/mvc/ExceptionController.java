@@ -1,5 +1,9 @@
 package com.bitcamp.mvc;
 
-public class ExceptionController {
+import org.springframework.stereotype.Controller;
 
+@Controller
+public class ExceptionController {
+	private HelloService service;
+	
 }
