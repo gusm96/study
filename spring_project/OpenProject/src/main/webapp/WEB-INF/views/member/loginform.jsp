@@ -9,14 +9,13 @@
 <%@ include file="/WEB-INF/views/frame/pageset.jsp"%>
 
 <style>
-
 #content>form>table td {
 	padding: 5px;
 }
+
 #content>form input {
 	padding: 5px;
 }
-
 </style>
 
 
@@ -37,10 +36,12 @@
 		<hr>
 		<!-- form 경로와 처리 경로가 동일 -> method 로 구분 -->
 		<form method="post">
+			<input type="hidden" name="url" value="${param.referer }">
 			<table>
 				<tr>
 					<td>아이디</td>
-					<td><input type="text" name="userid" value="${cookie.saveId != null ? cookie.saveId.value : ''}"></td>
+					<td><input type="text" name="userid"
+						value="${cookie.saveId != null ? cookie.saveId.value : ''}"></td>
 				</tr>
 				<tr>
 					<td>비밀번호</td>
@@ -48,22 +49,24 @@
 				</tr>
 				<tr>
 					<td></td>
-					<td> <input type="checkbox" name="saveid" value="on" ${cookie.saveId != null ? 'checked' : ''}> 아이디 저장하기</td>
-				</tr>				
+					<td><input type="checkbox" name="saveid" value="on"
+						${cookie.saveId != null ? 'checked' : ''}> 아이디 저장하기</td>
+				</tr>
 				<tr>
 					<td></td>
-					<td> <input type="submit" value="로그인"> <input type="reset"> </td>
-				</tr>			
+					<td><input type="submit" value="로그인"> <input
+						type="reset"></td>
+				</tr>
 			</table>
-		
+
 		</form>
-	
+
 	</div>
 	<!-- content 끝 -->
 
 
 	<!-- Javascript 추가 -->
-	<%@ include file="/WEB-INF/views/frame/footerset.jsp" %>
+	<%@ include file="/WEB-INF/views/frame/footerset.jsp"%>
 
 </body>
 </html>
