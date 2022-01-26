@@ -101,3 +101,5 @@ hs_err_pid*
 .classpath
 .project
 jsp_project/WebContent/META-INF/MANIFEST.MF
+
+sns/
